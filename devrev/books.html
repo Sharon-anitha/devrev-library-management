@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>library management</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!---js-->
+    <script src="script.js"></script>
+    <!--external css-->
+    <link rel="stylesheet" href="style.css">
+    <!---icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar fixed-top   navbar-expand-lg pb-5">
+            <div class="container-fluid text-center ">
+                <div>
+                    <a class=" navbar-brand " href="#"> <i class="fa fa-google-wallet"></i>  Willey library</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="book-bg">
+        <div class="container">
+            </br>
+            </br>
+            <input class="form-control " id="myInput" type="text" placeholder="Search..">
+
+            </br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Subject</th>
+                        <th>Publish-Date</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    <tr>
+                        <td class="text-white">Origin of Species</td>
+                        <td>Charles Darwin</td>
+                        <td>Science</td>
+                        <td>12-2-1991</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>War and Peace</td>
+                        <td>Leo Tolstoy</td>
+                        <td>History</td>
+                        <td>15-5-1890</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Alice in Wonderland</td>
+                        <td>Lewis Carrol</td>
+                        <td>Fantasy</td>
+                        <td>15-6-2001</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Broken Wings</td>
+                        <td>Sarojini Naidu</td>
+                        <td>Patriotic</td>
+                        <td>17-4-1973</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>India Divided</td>
+                        <td>Dr. Rajendra Prasad</td>
+                        <td>Patriotic</td>
+                        <td>11-6-1968</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>My Truth</td>
+                        <td>Indira Gandhi</td>
+                        <td>Biography</td>
+                        <td>19-11-1989</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Harry Potter</td>
+                        <td>J.K.Rowling</td>
+                        <td>Fantasy</td>
+                        <td>15-2-1997</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+            </br>
+            <div class="container text-center">
+                </br>
+                <ul class="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a href="book2.html">2</a></li>
+
+                </ul>
+
+            </div>
+            <div class="row text-center">
+                <button type="button" class="btn btn-outline-danger"><a href="index.html"><b>log-out</b></a></button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+
+    </script>
+</body>
+
+</html>
